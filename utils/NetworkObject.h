@@ -1,9 +1,9 @@
 #pragma once
 #include "framework.h"
 #include <iostream>
-#include "../libSerializer/Serializer.h"
-#include "../libSerializer/Compressor.h"
-#include "../libSerializer/Deserializer.h"
+#include "Serializer.h"
+#include "Compressor.h"
+#include "Deserializer.h"
 
 class NetworkObject {
 public:
