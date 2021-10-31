@@ -19,6 +19,8 @@ public:
 	const std::vector<char>* getBuffer();
 	const int getSize();
 
+	const bool isBufferCompletelyRead();
+
 private:
 	std::vector<char> * m_buffer;
 	int m_size;

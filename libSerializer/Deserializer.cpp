@@ -28,3 +28,10 @@ const std::vector<char>* Deserializer::getBuffer() {
 const int Deserializer::getSize(){
 	return m_size;
 }
+
+const bool Deserializer::isBufferCompletelyRead()
+{
+	char* valPos = m_buffer->data() + pos;
+	char* valEnd = &(*m_buffer->end());
+	return valPos==valEnd? true: false;
+}
