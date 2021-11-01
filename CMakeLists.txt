@@ -7,16 +7,11 @@ project ("TP2_Reseau_Serialization")
 
 ##########La lib d'utilities
 set(Utils_TP2_SRC 
-                        "utils/framework.cpp"
-                        "utils/NetworkObject.cpp"
-                        "utils/Enemy.cpp"
                         "utils/Player.cpp"
 						)
 
 set(Utils_TP2_HEADERS 
 							"utils/framework.h"
-                            "utils/NetworkObject.h"
-                            "utils/Enemy.h"
                             "utils/Player.h")
 
 add_library(Utils_TP2 STATIC ${Utils_TP2_SRC} ${Utils_TP2_HEADERS})
