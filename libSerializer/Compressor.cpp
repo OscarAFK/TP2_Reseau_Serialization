@@ -110,7 +110,7 @@ namespace uqac {
 
 
 		//--------------------- Vector3 ----------------------------
-		Vector3_16 Compressor::compressVector3(Vector3 vector, float minFloatX, float maxFloatX,
+		Vector3_16 Compressor::compressVector3(utils::Vector3 vector, float minFloatX, float maxFloatX,
 			float minFloatY, float maxFloatY,
 			float minFloatZ, float maxFloatZ, int precision)
 		{
@@ -123,14 +123,14 @@ namespace uqac {
 			);
 		}
 
-		Vector3 Compressor::decompressVector3(Vector3_16 vector, float minFloatX, float maxFloatX,
+		utils::Vector3 Compressor::decompressVector3(Vector3_16 vector, float minFloatX, float maxFloatX,
 			float minFloatY, float maxFloatY,
 			float minFloatZ, float maxFloatZ, int precision)
 		{
 			std::cout << "---- Start Vector DeCompression ---- " << std::endl;
 
 
-			Vector3 vectorDecomp = Vector3(
+			utils::Vector3 vectorDecomp = utils::Vector3(
 				decompressFloat(vector.x, minFloatX, maxFloatX, precision),
 				decompressFloat(vector.y, minFloatY, maxFloatY, precision),
 				decompressFloat(vector.z, minFloatZ, maxFloatZ, precision)
@@ -145,7 +145,7 @@ namespace uqac {
 
 		//--------------------- Vector3_32 ----------------------------
 
-		Vector3_32 Compressor::compressVector3_32(Vector3 vector, float minFloatX, float maxFloatX,
+		Vector3_32 Compressor::compressVector3_32(utils::Vector3 vector, float minFloatX, float maxFloatX,
 			float minFloatY, float maxFloatY,
 			float minFloatZ, float maxFloatZ, int precision)
 		{
@@ -158,14 +158,14 @@ namespace uqac {
 			);
 		}
 
-		Vector3 Compressor::decompressVector3_32(Vector3_32 vector, float minFloatX, float maxFloatX,
+		utils::Vector3 Compressor::decompressVector3_32(Vector3_32 vector, float minFloatX, float maxFloatX,
 			float minFloatY, float maxFloatY,
 			float minFloatZ, float maxFloatZ, int precision)
 		{
 			std::cout << "---- Start Vector DeCompression ---- " << std::endl;
 
 
-			Vector3 vectorDecomp = Vector3(
+			utils::Vector3 vectorDecomp = utils::Vector3(
 				decompressFloat(vector.x, minFloatX, maxFloatX, precision),
 				decompressFloat(vector.y, minFloatY, maxFloatY, precision),
 				decompressFloat(vector.z, minFloatZ, maxFloatZ, precision)
@@ -180,7 +180,7 @@ namespace uqac {
 
 		//--------------------- Quaternion ----------------------------
 
-		Quaternion_16 Compressor::compressQuaternions(Quaternion quaternion)
+		Quaternion_16 Compressor::compressQuaternions(utils::Quaternion quaternion)
 		{
 			std::cout << "---- Start Quaternion Compression ---- " << std::endl;
 
@@ -196,7 +196,7 @@ namespace uqac {
 			);
 		}
 
-		Quaternion Compressor::decompressQuaternions(Quaternion_16 quaternion)
+		utils::Quaternion Compressor::decompressQuaternions(Quaternion_16 quaternion)
 		{
 			std::cout << "---- Start Quaternion DeCompression ---- " << std::endl;
 
@@ -209,7 +209,7 @@ namespace uqac {
 			float _y = decompressFloat(quaternion.y, minValue, maxValue, precision);
 			float _z = decompressFloat(quaternion.z, minValue, maxValue, precision);
 
-			Quaternion quatDecomp = Quaternion(
+			utils::Quaternion quatDecomp = utils::Quaternion(
 				_x,
 				_y,
 				_z,

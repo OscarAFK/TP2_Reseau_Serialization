@@ -92,22 +92,22 @@ namespace uqac {
 			uint16_t compressInt(int value, int minInt, int maxInt);
 			int decompressInt(uint16_t value, int minInt, int maxInt);
 
-			Vector3_16 compressVector3(Vector3 vector, float minFloatX, float maxFloatX,
+			Vector3_16 compressVector3(utils::Vector3 vector, float minFloatX, float maxFloatX,
 				float minFloatY, float maxFloatY,
 				float minFloatZ, float maxFloatZ, int precision);
-			Vector3 decompressVector3(Vector3_16 vector, float minFloat, float maxFloat,
-				float minFloatY, float maxFloatY,
-				float minFloatZ, float maxFloatZ, int precision);
-
-			Vector3_32 compressVector3_32(Vector3 vector, float minFloatX, float maxFloatX,
-				float minFloatY, float maxFloatY,
-				float minFloatZ, float maxFloatZ, int precision);
-			Vector3 decompressVector3_32(Vector3_32 vector, float minFloat, float maxFloat,
+			utils::Vector3 decompressVector3(Vector3_16 vector, float minFloat, float maxFloat,
 				float minFloatY, float maxFloatY,
 				float minFloatZ, float maxFloatZ, int precision);
 
-			Quaternion_16 compressQuaternions(Quaternion quaternion);
-			Quaternion decompressQuaternions(Quaternion_16 quaternion);
+			Vector3_32 compressVector3_32(utils::Vector3 vector, float minFloatX, float maxFloatX,
+				float minFloatY, float maxFloatY,
+				float minFloatZ, float maxFloatZ, int precision);
+			utils::Vector3 decompressVector3_32(Vector3_32 vector, float minFloat, float maxFloat,
+				float minFloatY, float maxFloatY,
+				float minFloatZ, float maxFloatZ, int precision);
+
+			Quaternion_16 compressQuaternions(utils::Quaternion quaternion);
+			utils::Quaternion decompressQuaternions(Quaternion_16 quaternion);
 
 		};
 	}

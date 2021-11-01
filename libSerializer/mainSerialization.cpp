@@ -6,7 +6,7 @@
 
 void main() {
 	
-	uqac::serialization::Player p1 = uqac::serialization::Player(Vector3(1.0, 2.0, 3.0), Vector3(4.0, 5.0, 6.0), Quaternion(0.577, -0.240, 0.577, 0.526),100,50,420.69,"Charlot");
+	uqac::utilsTP2::Player p1 = uqac::utilsTP2::Player(uqac::utils::Vector3(1.0, 2.0, 3.0), uqac::utils::Vector3(4.0, 5.0, 6.0), uqac::utils::Quaternion(0.577, -0.240, 0.577, 0.526),100,50,420.69,"Charlot");
 	uqac::serialization::Serializer s = uqac::serialization::Serializer();
 
 	p1.Print();
